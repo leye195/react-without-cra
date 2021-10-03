@@ -16,6 +16,11 @@ const config: Configuration = {
   devtool: !isDevelopment ? "hidden-source-map" : "inline-source-map",
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx", ".json"],
+    alias: {
+      "@components": path.resolve(__dirname, "components"),
+      "@pages": path.resolve(__dirname, "pages"),
+      "@hooks": path.resolve(__dirname, "hooks"),
+    },
   },
   entry: {
     app: "./src/index",
